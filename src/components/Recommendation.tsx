@@ -16,7 +16,7 @@ export default function Recommendation({recommendations}:{recommendations:Movie[
 	)
 }
 
-const Card:React.FC<Movie> = ({ original_title,backdrop_path,id,...props}) => {
+const Card:React.FC<Movie> = ({ original_title,backdrop_path,id}) => {
 
   const {setMovieId, setMovieClicked} = useSelectMovie();
  
