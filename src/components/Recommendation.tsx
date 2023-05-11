@@ -29,7 +29,7 @@ const Card:React.FC<Movie> = ({ original_title,backdrop_path,id}) => {
       
   }
 	return (
-       <div className="text-white m-[30px] relative rounded-2xl border-2 border-white hover:scale-[1.1] transition transform duration-300 cursor-pointer"
+       <div className="text-white m-[20px] relative rounded-2xl border-2 border-white hover:scale-[1.1] transition transform duration-300 cursor-pointer"
         
          onClick={() => onMovieClick(id)}
        >

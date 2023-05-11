@@ -6,7 +6,7 @@ function Header({movie}:{movie:Movie}){
       window.scrollTo({top:0});
    },[movie]);
 	return (
-           <header className="w-full  md:h-[700px] lg:h-[700px] relative"> 
+           <header className="w-full  md:h-[700px]  relative"> 
        
             <div className="xl:absolute w-full h-[100%] xl:z-10 flex items-center xl:justify-around flex-col lg:flex-row">
                 <aside 
@@ -15,30 +15,30 @@ function Header({movie}:{movie:Movie}){
                     }}
                     className="rounded-[20px] xl:max-w-[50%] w-[80%]"
                  >
-                   <h1 className="ml-[25px] xl:mt-[50px] mt-[20px] mb-[20px] xl:mb-[50px] text-[30px] md:text-[50px] font-bold text-white">  
+                   <h1 className="ml-[25px] xl:mt-[50px] mt-[20px] mb-[20px] xl:mb-[40px] text-[16px] md:text-[30px] font-bold text-white">  
                         {movie?.original_title} 
                   </h1>
-                   <p className="my-[10px] mx-[20px] font-bold text-[15px] md:text-2xl text-white text-center">
+                   <p className="my-[10px] mx-[20px] font-bold text-[15px] md:text-[25px] text-white text-center">
                       {movie?.overview}
                    </p>
 
                    <footer className="w-[100%] flex  mb-[15px] mx-[20px] ">
                         
-                       <span className="font-bold text-white font-[8px] md:font-3xl ml-4 flex items-center"> 
+                       <span className="font-bold text-white font-[8px] font-[8px] md:font-[30px] ml-4 flex items-center"> 
                            <StarIcon/>  
                            {movie?.vote_average + " / 10"} 
                       </span>
-                       <span className="md:flex hidden  font-bold text-white font-[8px] md:font-3xl ml-4 items-center"> 
+                       <span className="md:flex hidden  font-bold text-white font-[8px] md:font-[30px] ml-4 items-center"> 
                              <GenresIcon/>
                             {movie?.genres?.slice(0,3).map((value,index) => value.name + (index < movie.genres.length - 1 ? '  |  ' : ""))} 
                        </span>
-                       <span className="flex md:hidden font-bold text-white font-[8px] md:font-3xl ml-4 items-center"> 
+                       <span className="flex md:hidden font-bold text-white font-[8px] md:font-[30px] ml-4 items-center"> 
                              <GenresIcon/>
                             {movie?.genres?.slice(0,2).map((value,index) => value.name + (index < movie.genres.length - 1 ? ' | ' : ""))} 
                        </span>
                       
 
-                       <span className=" flex font-bold text-white font-[8px] md:font-3xl ml-4 flex items-center">
+                       <span className=" flex font-bold text-white font-[8px] md:font-[30px] ml-4 flex items-center">
                            <TimeIcon/> 
                             2h 31m 
                       </span>
