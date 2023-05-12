@@ -12,7 +12,7 @@ export default function MovieCast({cast}:{cast:Cast[]}){
 	return (
 		<>
 		<h1 className="font-bold text-4xl ml-7 mt-7 text-white"> Cast </h1>
-       <section className="w-[90%] overflow-x-scroll flex h-[600px] m-auto" ref = {sectionRef}>
+       <section className="w-full overflow-x-scroll flex h-[600px] m-auto" ref = {sectionRef}>
          {
          	cast.map((value,index) => <Card key={index} {...value} />)
          }

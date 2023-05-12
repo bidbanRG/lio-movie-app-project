@@ -43,7 +43,7 @@ const Card:React.FC<Movie> = ({ original_title,backdrop_path,id}) => {
            
         </div>
            <img src = {`https://image.tmdb.org/t/p/w500${backdrop_path}`} 
-              className=" max-w-[600px]   rounded-2xl "
+              className=" w-[300px] sm:w-[400px] md:w-[500px] rounded-2xl "
               loading="lazy"
          />
        </div>
