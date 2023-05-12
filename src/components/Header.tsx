@@ -28,11 +28,11 @@ function Header({movie}:{movie:Movie}){
                            <StarIcon/>  
                            {movie?.vote_average} 
                       </span>
-                       <span className="md:flex hidden  font-bold text-white font-[8px] md:font-[30px] ml-4 items-center"> 
+                       <span className="hidden md:flex  font-bold text-white font-[8px] md:font-[30px] ml-4 items-center"> 
                              <GenresIcon/>
                             {movie?.genres?.slice(0,3).map((value,index) => value.name + (index < movie.genres.length - 1 ? '  |  ' : ""))} 
                        </span>
-                       <span className="flex md:hidden font-bold text-white font-[8px] md:font-[30px] ml-4 items-center"> 
+                       <span className="hidden sm:flex md:hidden font-bold text-white font-[8px] md:font-[30px] ml-4 items-center"> 
                              <GenresIcon/>
                             {movie?.genres?.slice(0,2).map((value,index) => value.name + (index < movie.genres.length - 1 ? ' | ' : ""))} 
                        </span>
