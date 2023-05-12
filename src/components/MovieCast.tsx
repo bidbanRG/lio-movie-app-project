@@ -12,7 +12,7 @@ export default function MovieCast({cast}:{cast:Cast[]}){
 	return (
 		<>
 		<h1 className="font-bold text-4xl ml-7 mt-7 text-white"> Cast </h1>
-       <section className="w-full overflow-x-scroll flex h-[600px]" ref = {sectionRef}>
+       <section className="w-[90%] overflow-x-scroll flex h-[600px] m-auto" ref = {sectionRef}>
          {
          	cast.map((value,index) => <Card key={index} {...value} />)
          }
@@ -34,7 +34,7 @@ const Card:React.FC<Cast> = ({name,character,profile_path}) => {
            <p className="text-2xl m-auto text-center mb-4"> {character} </p>
         </div>
            <img src = {`https://image.tmdb.org/t/p/w500${profile_path}`} 
-              className="min-w-[300px] max-w-[300px] rounded-2xl"
+              className="min-w-[150px] max-w-[300px] rounded-2xl"
               loading="lazy"
          />
        </div>

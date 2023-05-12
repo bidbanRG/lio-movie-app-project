@@ -7,7 +7,7 @@ export default function Recommendation({recommendations}:{recommendations:Movie[
 	return (
 		<>
 		 <h1 className="font-bold text-4xl ml-7 mt-7 text-white"> Recommendations </h1>
-         <section className="flex flex-wrap justify-center">
+         <section className="flex flex-wrap justify-center w-full">
            {
            	recommendations.map((data,index) => <Card key = {index} {...data} />)
            }
@@ -43,7 +43,7 @@ const Card:React.FC<Movie> = ({ original_title,backdrop_path,id}) => {
            
         </div>
            <img src = {`https://image.tmdb.org/t/p/w500${backdrop_path}`} 
-              className="min-w-[400px] max-w-[400px]   rounded-2xl "
+              className=" max-w-[600px]   rounded-2xl "
               loading="lazy"
          />
        </div>

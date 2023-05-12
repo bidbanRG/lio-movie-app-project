@@ -18,7 +18,7 @@ function App() {
 
   return (
  
-     <section className='w-full min-h-screen bg-[#171717]'>
+     <section className={`w-[full]  bg-[#171717]`}>
        <Header movie = {movie}/>
        <MovieCast cast = {cast} />
        <Recommendation recommendations={recommendations}/>

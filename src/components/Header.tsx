@@ -8,14 +8,14 @@ function Header({movie}:{movie:Movie}){
 	return (
            <header className="w-full  md:h-[700px]  relative"> 
        
-            <div className="xl:absolute w-full h-[100%] xl:z-10 flex items-center xl:justify-around flex-col lg:flex-row">
+            <div className="absolute w-full h-[100%] z-10 flex items-center xl:justify-around flex-col lg:flex-row">
                 <aside 
                    style={{backdropFilter:'blur(10px)',
                       backgroundColor:'rgb(0,0,0,0.4)'
                     }}
-                    className="rounded-[20px] xl:max-w-[50%] w-[80%]"
+                    className="rounded-[20px] xl:w-[50%] w-[80%] m-auto xl:m-0"
                  >
-                   <h1 className="ml-[25px] xl:mt-[50px] mt-[20px] mb-[20px] xl:mb-[40px] text-[16px] md:text-[30px] font-bold text-white">  
+                   <h1 className="ml-[25px]  mt-[20px] mb-[20px] text-[24px] md:text-[40px] font-bold text-white">  
                         {movie?.original_title} 
                   </h1>
                    <p className="my-[10px] mx-[20px] font-bold text-[15px] md:text-[25px] text-white text-center">
@@ -26,7 +26,7 @@ function Header({movie}:{movie:Movie}){
                         
                        <span className="font-bold text-white font-[8px] font-[8px] md:font-[30px] ml-4 flex items-center"> 
                            <StarIcon/>  
-                           {movie?.vote_average + " / 10"} 
+                           {movie?.vote_average} 
                       </span>
                        <span className="md:flex hidden  font-bold text-white font-[8px] md:font-[30px] ml-4 items-center"> 
                              <GenresIcon/>
@@ -51,15 +51,15 @@ function Header({movie}:{movie:Movie}){
                             <span className="font-extrabold"> Play </span>
                         </button>
                   </aside>
-                <img  className=" w-[400px] max-h-[700px] rounded-[10px]"   
+                <img  className=" w-[400px] max-h-[700px] rounded-[10px] xl:opacity-[1] opacity-0"   
                src = {`https://image.tmdb.org/t/p/w1280${movie?.poster_path}`}
                   loading="lazy"
                />
             </div>
            <img 
-               className="w-full md:h-[700px] lg:h-[700px] hidden xl:flex"   
+               className="w-full md:h-[500px] lg:h-[700px] h-[400px] lg:blur-[5px] blur-[2px]"   
                src = {`https://image.tmdb.org/t/p/w1280${movie?.backdrop_path}`}
-               style = {{filter:'blur(5px)'}}
+               
                loading="lazy"
           /> 
     </header>
